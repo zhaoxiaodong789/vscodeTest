@@ -38,7 +38,7 @@ void quicksort(int left, int right){
 
 int main(){
 	
-	int i,temp[101],j,y;
+	int i,temp[101],j;
 	scanf("%d", &n);
 	for(i=1;i<=n;i++)
 		scanf("%d", &a[i]);
