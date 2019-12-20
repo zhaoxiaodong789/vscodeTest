@@ -1,9 +1,9 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-void SelectionSort(vector<int>& src, vector<int>& arr){
+void SelectionSort( vector<int>& arr){
     int min, i,j,temp  ;
-    arr = src;
+    
     for (i = 0; i < arr.size()-1;i++){
         min = i;
         for(j=i+1;j<arr.size();j++){
@@ -13,8 +13,8 @@ void SelectionSort(vector<int>& src, vector<int>& arr){
         }
 
         if(min != i){
-            temp = arr[j];
-            arr[j] = arr[min];
+            temp = arr[i];
+            arr[i] = arr[min];
             arr[min] = temp;
         }
     }
@@ -26,14 +26,14 @@ int main(){
     
     vector<int> src(10), arr(10);
     cout << "hello" << endl;
-    for (int i = 0; i < 2;i++){
+    for (int i = 0; i < 10 ;i++){
         cin >> src[i];
        
     }
+    arr = src;
+    cout << arr.size()<<endl;
 
-    cout << arr.size();
-
-    SelectionSort(src, arr);
+    SelectionSort(arr);
 
     for (int i = 0; i < 10;i++){
         
@@ -41,6 +41,6 @@ int main(){
     }
    
 
-    system("pause");
+   
     return 0;
 }
